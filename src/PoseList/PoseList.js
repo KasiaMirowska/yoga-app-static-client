@@ -1,24 +1,14 @@
 import React from 'react';
 import YogaContext from '../Context';
 import PoseListItem from '../PoseListItem/PoseListItem';
-import APIcalls from '../services/API_service';
 
 
 export default class PoseList extends React.Component {
     static contextType = YogaContext;
     
-    
-    componentDidMount = () => {
-        APIcalls.getAllPosesData()
-            .then(data => {
-                this.context.setPosesList(data);
-            })
-            .catch(err => {
-                this.context.setError(err)
-            })
-    }
 
     render() {
+        console.log(this.context)
         const poses = this.context.poses.map(pose => {
             return <PoseListItem
                 key={pose.id}

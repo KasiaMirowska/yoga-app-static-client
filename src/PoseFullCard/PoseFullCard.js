@@ -87,10 +87,12 @@ export default class PoseFullCard extends React.Component {
 
 
     render() {
+        
         const { pose_id } = this.props.match.params;
         const pose = this.context.poses.find(pose => {
             return pose.id === Number(pose_id)
         })
+        console.log(pose)
         return (
             <div>
                 <h3>{pose.nameEng}</h3>

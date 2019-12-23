@@ -22,7 +22,7 @@ export class YogaContextProvider extends React.Component {
         super()
         this.state = {
             currentFlow: null,
-            poses: [],
+            poses: STORE.poses,
             flows: STORE.flows,
             poseAttributes: STORE.attributes,
             error: null,
