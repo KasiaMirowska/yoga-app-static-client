@@ -13,8 +13,8 @@ export default class PoseList extends React.Component {
             return <PoseListItem
                 key={pose.id}
                 id={pose.id}
-                name={pose.name_eng}
-                sanskrit={pose.name_san}
+                name={pose.nameEng}
+                sanskrit={pose.nameSan}
                 img={pose.img}
             />
 
